@@ -1,0 +1,47 @@
+s=datetime.date.today()
+
+u='sen12345'
+role= pd.read_sql('select role from employee where user_id="%s";'%u,con)
+n=int(input('enter cust_no:'))
+st=input('state code:')    
+di =int(input('district code:'))
+secd =input('serial code:')
+seno =int(input('serial no:'))
+today=str(datetime.date.today())          
+cano =int(input('car code:'))
+
+
+stk='''select stock_left from stock where car_no= %f;'''%cano
+stktable= pd.read_sql(stk,con)
+stks=stktable.get('stock_left')
+stkl=pd.Series(stks)
+stkl=str(stkl[0])
+
+stkl=int(stkl)
+
+if stkl <= 0 :
+
+    print('not enough stock')
+
+if stkl >0:
+    dis1=int(input('discount if any.:'))
+    dis=100-dis1
+    l=l=(st,di,secd,seno,cano,n,today,dis1)
+    cmd=''' insert into sell2 values('%s',%d,'%s',%d,%d,%d,'%s',%f);'''%l
+    cur.execute(cmd)
+    con.commit()
+    billcmd='select s.* ,car_name, (sell_price * %f/100) as ammount_payable from sell2 s join car_name c on (c.car_no=s.car_no);'%dis
+    bill=pd.read_sql(billcmd,con)
+    bill2=bill.iloc[-1:]
+    print(''' Your bill for purchase is:
+                ''',bill2)
+    ammount=bill2.loc[0,'ammount_payable']
+    cmd2= '''update stock set stock_left= stock_left-1;'''
+    
+    cur.execute(cmd2)
+    con.commit()
+
+
+    
+    print('congratulation the car is sold')
+
