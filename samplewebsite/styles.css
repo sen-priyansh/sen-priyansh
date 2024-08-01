@@ -1,0 +1,67 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: pink; /* Pink background */
+    font-family: Arial, sans-serif; /* Clean font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    overflow: hidden; /* Prevent overflow */
+    margin: 0; /* Remove default margin */
+}
+
+.tile {
+    background-color: #ff69b4; /* Pink tile */
+    border-radius: 20px; /* Rounded edges */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    position: relative; /* For absolute positioning of Button 2 */
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+    max-width: 1000px; /* Maximum width */
+    max-height: 800px; /* Maximum height */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+
+
+.giphy-embed {
+    width: 100%;
+    height: 300px; /* Decrease the height */
+    display: block; /* Ensure block display to avoid extra space */
+}
+
+.button-container {
+    margin-top: 20px; /* Space between GIF and buttons */
+    display: flex;
+    justify-content: center;
+    position: relative; /* For positioning Button 2 */
+    height: 100px; /* Ensure enough space for buttons */
+}
+
+.glow-button {
+    background-color: #ff69b4; /* Light pink background for buttons */
+    border: none; /* Remove default border */
+    color: rgb(255, 255, 255); /* White text */
+    padding: 15px 25px; /* Padding for the button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block display */
+    font-size: 16px; /* Font size */
+    margin: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.8), 0 0 10px rgba(27, 39, 209, 0.8); /* Glowing effect with blue outline */
+    transition: box-shadow 1ms ease-in-out; /* Smooth transition for glowing effect */
+    position: relative; /* Ensure button is positioned relative to the container */
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 1), 0 0 20px rgba(0, 191, 255, 1); /* Intense glowing effect with blue outline on hover */
+}
