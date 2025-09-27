@@ -2,7 +2,7 @@
 - 👀 I’m interested in programming, cyber security, and wildlife
 - 🌱 I’m currently learning Python, C and GoLang
 - 💞️ I’m looking to collaborate on GitHub
-- 📫 How to reach me Gmail:- priyanshsen50@gmail.com
+- 📫 How to reach me Gmail:- priyansh.sen@outlook.com
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I also know MySQL, HTML, and WordPress.
 
