@@ -28,9 +28,9 @@ I'm a passionate developer with a diverse set of skills ranging from low-level p
 ### 🛠️ Languages and Tools
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,c,go,html,css,js,mysql,wordpress,git,vscode,linux,bash" />
+  <img src="https://skillicons.dev/icons?i=python,rust,cpp,go,ts,js,react,django,flask,html,css" />
   <br>
-  <img src="https://skillicons.dev/icons?i=pandas,pytorch,selenium,flask,django" />
+  <img src="https://skillicons.dev/icons?i=mysql,postgres,git,linux,bash,pytorch,pandas,selenium,vscode" />
 </div>
 
 ---
